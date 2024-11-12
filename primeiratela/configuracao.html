@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8, permitindo a exibição de caracteres especiais, como acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva, ajustando a largura para diferentes tamanhos de tela -->
+    <link rel="stylesheet" href="configuracao.css"> <!-- Link para o arquivo CSS onde os estilos do layout são definidos -->
+    <title>Configurações</title> <!-- Define o título da página exibido na aba do navegador -->
+</head>
+<body>
+    <div class="settings-container"> <!-- Container principal das configurações -->
+        <div class="settings-menu"> <!-- Menu lateral para navegação entre as diferentes seções de configuração -->
+            <button onclick="showSection('profile')" class="menu-btn">Perfil</button> <!-- Botão para mostrar a seção de perfil -->
+            <button onclick="showSection('email')" class="menu-btn">Email</button> <!-- Botão para mostrar a seção de email -->
+            <button onclick="showSection('password')" class="menu-btn">Senha</button> <!-- Botão para mostrar a seção de senha -->
+            <a href="menu.html" class="menu-btn back-btn">Voltar</a> <!-- Link para voltar ao menu principal -->
+        </div>
+
+        <div class="settings-content"> <!-- Área onde o conteúdo das configurações será exibido -->
+            <!-- Seção de configurações de perfil -->
+            <div id="profile" class="settings-section active">
+                <h2>Configurações de Perfil</h2> <!-- Título da seção -->
+                <label for="name-input">Nome do Perfil:</label> <!-- Rótulo para o campo de nome do perfil -->
+                <input type="text" id="name-input" placeholder="Digite o novo nome"> <!-- Campo de entrada para o novo nome do perfil -->
+                
+                <label for="profile-pic-input">Imagem do Perfil:</label> <!-- Rótulo para o campo de imagem do perfil -->
+                <input type="file" id="profile-pic-input" accept="image/*"> <!-- Campo para selecionar uma imagem como foto de perfil -->
+                
+                <button onclick="saveProfileSettings()" class="save-btn">Salvar Alterações</button> <!-- Botão para salvar as alterações no perfil -->
+            </div>
+
+            <!-- Seção de configurações de email -->
+            <div id="email" class="settings-section" style="display: none;">
+                <h2>Configurações de Email</h2> <!-- Título da seção -->
+                <label for="email-input">Novo Email:</label> <!-- Rótulo para o campo de email -->
+                <input type="email" id="email-input" placeholder="Digite o novo email"> <!-- Campo para digitar o novo email -->
+                <button onclick="saveEmailSettings()" class="save-btn">Salvar Alterações</button> <!-- Botão para salvar as alterações no email -->
+            </div>
+
+            <!-- Seção de configurações de senha -->
+            <div id="password" class="settings-section" style="display: none;">
+                <h2>Configurações de Senha</h2> <!-- Título da seção -->
+                <label for="password-input">Nova Senha:</label> <!-- Rótulo para o campo de nova senha -->
+                <input type="password" id="password-input" placeholder="Digite a nova senha"> <!-- Campo para digitar a nova senha -->
+                <label for="confirm-password-input">Confirme a Nova Senha:</label> <!-- Rótulo para o campo de confirmação da nova senha -->
+                <input type="password" id="confirm-password-input" placeholder="Confirme a nova senha"> <!-- Campo para confirmar a nova senha -->
+                <button onclick="savePasswordSettings()" class="save-btn">Salvar Alterações</button> <!-- Botão para salvar as alterações na senha -->
+            </div>
+        </div>
+    </div>
+
+    <script src="configuracao.js"></script> <!-- Link para o arquivo JavaScript onde a lógica para trocar seções de configurações é implementada -->
+</body>
+</html>
+
+

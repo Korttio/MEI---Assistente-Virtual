@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para dispositivos móveis -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- Importa a fonte Poppins do Google Fonts -->
+    <link rel="stylesheet" href="contatos.css"> <!-- Link para o arquivo CSS, onde os estilos estão definidos -->
+    <title>Contatos</title> <!-- Título da página exibido na aba do navegador -->
+</head>
+<body>
+    <div class="container"> <!-- Contêiner principal que envolve todo o conteúdo da página -->
+        
+        <!-- Botão para voltar ao menu principal -->
+        <button class="back-button" onclick="window.location.href='menu.html'">Voltar ao Menu Principal</button>
+
+        <h1>Contatos</h1> <!-- Título da página, exibindo "Contatos" -->
+
+        <!-- Lista de contatos -->
+        <div class="contact-list">
+            
+            <!-- Item de contato 1 -->
+            <div class="contact-item">
+                <!-- Div que contém as informações básicas do contato, que aciona o accordion ao ser clicado -->
+                <div class="contact-info" onclick="toggleAccordion(this)">
+                    <!-- Imagem do contato -->
+                    <img src="img/joao.png" alt="Foto do contato" class="contact-image">
+                    <!-- Nome do contato -->
+                    <p class="contact-name">João Gabriel Costa e Andrade</p>
+                </div>
+                <!-- Conteúdo do accordion, exibido ou escondido conforme o clique -->
+                <div class="accordion-content">
+                    <p>RA - 5144965.</p> <!-- Informações adicionais do contato -->
+                </div>
+            </div>
+            
+            <!-- Item de contato 2 -->
+            <div class="contact-item">
+                <div class="contact-info" onclick="toggleAccordion(this)">
+                    <img src="img/kelly.jpg" alt="Foto do contato" class="contact-image">
+                    <p class="contact-name">Kelly Vitória dos Santos da Silva</p>
+                </div>
+                <div class="accordion-content">
+                    <p>RA - 5169593.</p>
+                </div>
+            </div>
+            
+            <!-- Item de contato 3 -->
+            <div class="contact-item">
+                <div class="contact-info" onclick="toggleAccordion(this)">
+                    <img src="img/amanda.JPG" alt="Foto do contato" class="contact-image">
+                    <p class="contact-name">Amanda Gabriely Batista Gonçalves</p>
+                </div>
+                <div class="accordion-content">
+                    <p>RA - 4123077.</p>
+                </div>
+            </div>
+            
+            <!-- Item de contato 4 -->
+            <div class="contact-item">
+                <div class="contact-info" onclick="toggleAccordion(this)">
+                    <img src="img/guilherme.jpeg" alt="Foto do contato" class="contact-image">
+                    <p class="contact-name">Guilherme Brito Pereira dos Santos</p>
+                </div>
+                <div class="accordion-content">
+                    <p>RA - 4747321.</p>
+                </div>
+            </div>
+
+            <!-- Item de contato 5 -->
+            <div class="contact-item">
+                <div class="contact-info" onclick="toggleAccordion(this)">
+                    <img src="img/jovanna.JPG" alt="Foto do contato" class="contact-image">
+                    <p class="contact-name">Jovanna Monique Oliveira de Assis</p>
+                </div>
+                <div class="accordion-content">
+                    <p>RA - 5145490.</p>
+                </div>
+            </div>
+
+            <!-- Item de contato 6 -->
+            <div class="contact-item">
+                <div class="contact-info" onclick="toggleAccordion(this)">
+                    <img src="img/marcos.jpeg" alt="Foto do contato" class="contact-image">
+                    <p class="contact-name">Marcos Vinicius Gomes Brito</p>
+                </div>
+                <div class="accordion-content">
+                    <p>RA - 5111609.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript onde as funções para manipulação da página estão -->
+    <script src="contatos.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,162 @@
+/* Estilo geral da página */
+body {
+  display: flex; /* Usando Flexbox para centralizar os elementos */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Preenche toda a altura da tela */
+  margin: 0; /* Remove margens padrões */
+  background-color: #e6e6e7; /* Cor de fundo suave */
+  font-family: Arial, sans-serif; /* Define a fonte do corpo */
+}
+
+/* Contêiner centralizado */
+.container {
+  text-align: center; /* Alinha o texto ao centro */
+  border: 5px solid #009688; /* Borda verde */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  background-color: #096d63; /* Cor de fundo verde escuro */
+  width: 300px; /* Largura do contêiner */
+  height: 300px; /* Altura do contêiner */
+  display: flex; /* Usa Flexbox dentro do contêiner */
+  flex-direction: column; /* Organiza os itens em coluna */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Estilo do título */
+h1 {
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  color: #ffffff; /* Cor branca para o título */
+}
+
+/* Estilo dos campos de entrada */
+input {
+  width: 100%; /* Preenche toda a largura disponível */
+  padding: 10px; /* Espaçamento interno */
+  margin-bottom: 10px; /* Espaçamento abaixo */
+  border: none; /* Remove bordas padrões */
+  border-radius: 5px; /* Bordas arredondadas */
+  background-color: #fdfdfd; /* Cor de fundo suave */
+  color: #1b1a25; /* Cor do texto */
+  display: flex; /* Flexbox para o input */
+}
+
+/* Efeito de foco nos campos de entrada */
+input:focus {
+  outline: none; /* Remove o contorno padrão do foco */
+  border: 2px solid #030303; /* Adiciona borda preta ao focar */
+}
+
+/* Estilo do botão */
+.button {
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  color: white; /* Cor do texto do botão */
+  background-color: #009688; /* Cor de fundo do botão */
+  border: none; /* Remove bordas */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  transition: background-color 0.3s; /* Animação de transição da cor de fundo */
+}
+
+/* Efeito de hover no botão */
+.button:hover {
+  background-color: #055048; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilo do link */
+.link {
+  color: #cac8c8; /* Cor do texto do link */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* Efeito de hover no link */
+.link:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilos do pop-up */
+#popup {
+  display: none; /* O pop-up está oculto por padrão */
+  position: fixed; /* Posiciona o pop-up fixo na tela */
+  top: 0;
+  left: 0;
+  width: 100%; /* Preenche a largura da tela */
+  height: 100%; /* Preenche a altura da tela */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro e semitransparente */
+  display: flex;
+  align-items: center; /* Centraliza o conteúdo do pop-up */
+  justify-content: center; /* Centraliza o conteúdo do pop-up */
+  z-index: 1000; /* Garante que o pop-up apareça acima de outros elementos */
+}
+
+/* Estilo do conteúdo do pop-up */
+.popup-content {
+  width: 90%; /* Largura do conteúdo do pop-up */
+  max-width: 400px; /* Largura máxima */
+  background-color: #ffffff; /* Cor de fundo branca */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave ao redor */
+  text-align: center; /* Centraliza o texto dentro do pop-up */
+  position: relative; /* Posicionamento relativo para o botão de fechar */
+  animation: fadeIn 0.3s ease; /* Animação suave de aparecimento */
+}
+
+/* Estilo do botão de fechar no pop-up */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px; /* Tamanho do ícone de fechar */
+  color: #888; /* Cor do ícone */
+  cursor: pointer; /* Cursor de clique */
+  transition: color 0.3s ease; /* Transição da cor */
+}
+
+/* Efeito de hover no botão de fechar */
+.close-btn:hover {
+  color: #444; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo do título dentro do pop-up */
+.popup-content h2 {
+  font-size: 1.5rem; /* Tamanho da fonte */
+  color: #044709; /* Cor do título */
+  margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo do parágrafo dentro do pop-up */
+.popup-content p {
+  font-size: 1rem; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+  margin-bottom: 20px; /* Espaçamento abaixo do parágrafo */
+}
+
+/* Estilo do botão de ação dentro do pop-up */
+.popup-action-btn {
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 1rem; /* Tamanho da fonte */
+  color: white; /* Cor do texto */
+  background-color: #43e612; /* Cor de fundo do botão */
+  border: none; /* Remove bordas */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de clique */
+  transition: background-color 0.3s ease, transform 0.2s; /* Animações de transição */
+}
+
+/* Efeito de hover no botão de ação */
+.popup-action-btn:hover {
+  background-color: #36b60f; /* Cor mais escura ao passar o mouse */
+  transform: scale(1.05); /* Aumenta o tamanho do botão levemente */
+}
+
+/* Animação para o fade-in do pop-up */
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Começa invisível */
+  }
+  to {
+      opacity: 1; /* Torna-se visível */
+  }
+}

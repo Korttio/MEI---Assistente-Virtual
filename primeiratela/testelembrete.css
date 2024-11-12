@@ -1,0 +1,29 @@
+.calendario {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.dias-da-semana, .dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.dias div, .dias-da-semana div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.lembrete {
+    margin-top: 20px;
+}
+
+.lembrar {
+    margin-top: 10px;
+    display: none;
+    padding: 10px;
+    border: 1px solid #000;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8, que suporta caracteres especiais como acentos e símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo, ajustando a escala da página conforme a largura da tela do dispositivo -->
+    <title>Calendário Funcional</title> <!-- Define o título da página que aparecerá na aba do navegador -->
+    <link rel="stylesheet" href="calendario.css"> <!-- Link para o arquivo de estilo CSS, onde são definidos os estilos visuais -->
+</head>
+<body>
+    <div class="calendario"> <!-- Container principal do calendário -->
+        <header> <!-- Cabeçalho do calendário, onde o título e botões de navegação ficam -->
+            <h1 id="titulo"></h1> <!-- O título do mês/ano do calendário será inserido dinamicamente aqui -->
+            <button id="btn-anterior">&lt;</button> <!-- Botão para navegar para o mês anterior -->
+            <button id="btn-proximo">&gt;</button> <!-- Botão para navegar para o mês seguinte -->
+        </header>
+        <div class="dias-da-semana"> <!-- Linha para exibir os dias da semana -->
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sab</div>
+        </div>
+        <div class="dias" id="dias"></div> <!-- Área onde os dias do mês serão preenchidos dinamicamente -->
+        <div class="lembrete"> <!-- Área para o usuário adicionar lembretes -->
+            <input type="date" id="data-lembrete"> <!-- Campo para selecionar a data do lembrete -->
+            <input type="text" id="texto-lembrete" placeholder="Digite seu lembrete"> <!-- Campo para o texto do lembrete -->
+            <button id="btn-adicionar-lembrete">Adicionar Lembrete</button> <!-- Botão para adicionar o lembrete -->
+            <button id="btn-sair" onclick="window.location.href='menu.html'">Sair</button> <!-- Botão para sair e voltar ao menu principal -->
+        </div>
+        
+        <div id="lembrar" class="lembrar"></div> <!-- Div onde os lembretes serão exibidos -->
+    </div>
+    <script src="calendario.js"></script> <!-- Link para o arquivo JavaScript que irá controlar a funcionalidade do calendário -->
+</body>
+</html>

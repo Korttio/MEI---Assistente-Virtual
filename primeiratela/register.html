@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define o tipo de documento como HTML5 -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página ser responsiva em dispositivos móveis -->
+    <link rel="stylesheet" href="register.css"> <!-- Link para o arquivo CSS externo que estiliza a página -->
+    <title>Registro</title> <!-- Define o título da página que aparecerá na aba do navegador -->
+</head>
+<body>
+    <!-- Container para agrupar o conteúdo principal da página -->
+    <div class="container">
+        <h1>Registro</h1> <!-- Título principal da página de registro -->
+        
+        <!-- Formulário de registro -->
+        <form id="registerForm">
+            <input type="text" id="name" placeholder="Nome" required> <!-- Campo de entrada para o nome do usuário, obrigatório -->
+            <input type="email" id="email" placeholder="Email" required> <!-- Campo de entrada para o email do usuário, obrigatório -->
+            <input type="password" id="password" placeholder="Senha" required> <!-- Campo de entrada para a senha do usuário, obrigatório -->
+            <button type="submit" class="button">Registrar</button> <!-- Botão para enviar o formulário -->
+        </form>
+
+        <!-- Parágrafo para exibir mensagens de erro, se houver -->
+        <p id="errorMessage" class="error-message"></p>
+
+        <!-- Link para redirecionar para a página de login, caso o usuário já tenha uma conta -->
+        <p>Já tem uma conta? <a href="login.html" class="link">Login</a></p>
+    </div>
+
+    <!-- Script JavaScript para manipular o envio do formulário -->
+    <script>
+        // Adiciona um ouvinte de evento ao formulário para capturar o envio
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do formulário (recarregar a página)
+            
+            // Obtém os valores dos campos de entrada
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Verifica se o email já está registrado no localStorage
+            if (localStorage.getItem(email)) {
+                const errorMessage = document.getElementById("errorMessage");
+                errorMessage.textContent = "Este email já está registrado."; // Mensagem de erro
+                errorMessage.style.display = "block"; // Exibe a mensagem de erro
+            } else {
+                // Cria um objeto com os dados do usuário
+                const userData = {
+                    name: name,
+                    email: email,
+                    password: password
+                };
+                // Armazena os dados do usuário no localStorage, usando o email como chave
+                localStorage.setItem(email, JSON.stringify(userData));
+
+                // Exibe um alerta de sucesso e redireciona para a página de login
+                alert("Registro bem-sucedido! Você será redirecionado para a página de login.");
+                window.location.href = "login.html"; // Redireciona para a página de login
+            }
+        });
+    </script>
+
+    <!-- Script externo para funcionalidades adicionais (se houver) -->
+    <script src="register.js"></script>
+</body>
+</html>

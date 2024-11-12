@@ -1,0 +1,76 @@
+/* Estilização geral do corpo da página */
+body {
+    display: flex; /* Define o layout do corpo como flexível, para facilitar o alinhamento */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define a altura do corpo para ocupar 100% da altura da viewport */
+    margin: 0; /* Remove a margem padrão da página */
+    background-color: #e6e6e7; /* Define a cor de fundo da página */
+    font-family: Arial, sans-serif; /* Define a fonte principal da página */
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    border: 5px solid rgba(48, 46, 46, 0); /* Bordas com transparência (não visíveis neste caso) */
+    padding: 20px; /* Adiciona espaço interno */
+    border-radius: 10px; /* Define bordas arredondadas */
+    background-color: #096d63; /* Define a cor de fundo do contêiner */
+    width: 300px; /* Largura fixa do contêiner */
+    height: 300px; /* Altura fixa do contêiner */
+    display: flex; /* Define o layout do contêiner como flexível */
+    flex-direction: column; /* Organiza o conteúdo em uma coluna */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Estilos para o título */
+h1 {
+    margin-bottom: 20px; /* Adiciona um espaço inferior */
+    color: #ffffff; /* Define a cor do texto para branco */
+}
+
+/* Estilos para os campos de entrada */
+input {
+    width: 100%; /* Define a largura do campo para 100% do contêiner pai */
+    padding: 10px; /* Adiciona espaço interno no campo */
+    margin-bottom: 10px; /* Adiciona espaço inferior entre os campos */
+    border: none; /* Remove as bordas padrão */
+    border-radius: 5px; /* Define bordas arredondadas */
+    background-color: #fdfdfd; /* Define a cor de fundo do campo */
+    color: #1b1a25; /* Define a cor do texto dentro do campo */
+    display: flex; /* Define o layout do campo como flexível */
+}
+
+/* Estilos para o campo de entrada quando está em foco */
+input:focus {
+    outline: none; /* Remove a borda de destaque padrão */
+    border: 2px solid #030303; /* Adiciona uma borda de 2px ao redor do campo */
+}
+
+/* Estilos para o botão de registro */
+.button {
+    padding: 10px 20px; /* Define o espaçamento interno do botão */
+    color: white; /* Define a cor do texto do botão */
+    background-color: #009688; /* Define a cor de fundo do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Define bordas arredondadas para o botão */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Suaviza a transição da cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o botão quando o mouse passa sobre ele */
+.button:hover {
+    background-color: #096d63; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o link de navegação */
+.link {
+    color: #000000; /* Define a cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+}
+
+/* Estilos para o link ao passar o mouse */
+.link:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao link ao passar o mouse */
+}

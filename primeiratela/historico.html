@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8, suportando caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página se ajustar a diferentes tamanhos de tela -->
+    <link rel="stylesheet" href="historico.css"> <!-- Vincula o arquivo CSS externo para estilizar a página -->
+    <title>Histórico de Mensagens</title> <!-- Define o título da página -->
+</head>
+<body>
+    <!-- Contêiner principal para o histórico de mensagens -->
+    <div class="historico-container">
+        <h2>Histórico de Mensagens</h2> <!-- Título da seção de histórico de mensagens -->
+        
+        <!-- Área onde as mensagens serão exibidas -->
+        <div id="historico-mensagens">
+            <!-- Exemplo de mensagem do usuário -->
+            <div class="message user">
+                <img class="avatar" src="img/gemini.svg" alt="User avatar"> <!-- Avatar do usuário -->
+                <div class="message-content">Mensagem do usuário aqui</div> <!-- Conteúdo da mensagem do usuário -->
+            </div>
+
+            <!-- Exemplo de mensagem do bot -->
+            <div class="message bot">
+                <img class="avatar" src="img/user.jpg" alt="Bot avatar"> <!-- Avatar do bot -->
+                <div class="message-content">Resposta do bot aqui</div> <!-- Conteúdo da resposta do bot -->
+            </div>
+        </div>
+        
+        <!-- Botão para fechar o histórico e voltar ao menu -->
+        <button id="btn-fechar-historico" onclick="window.location.href='menu.html'">Fechar Histórico</button>
+    </div>
+
+    <!-- Script externo para funcionalidades adicionais no histórico de mensagens -->
+    <script src="historico.js"></script>
+</body>
+</html>

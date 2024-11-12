@@ -1,0 +1,113 @@
+/* Aplicação de estilo global */
+* {
+  margin: 0;                   /* Remove as margens de todos os elementos */
+  padding: 0;                  /* Remove o padding de todos os elementos */
+  box-sizing: border-box;      /* Define o modelo de box-sizing para todos os elementos */
+  font-family: 'Poppins', sans-serif; /* Define a fonte global para 'Poppins' */
+}
+
+body, html {
+  height: 100%;                /* Faz o body e html ocuparem 100% da altura da tela */
+  margin: 0;                   /* Remove a margem padrão do body */
+}
+
+/* Estilos do corpo da página */
+body {
+  display: flex;               /* Usando flexbox para centralizar o conteúdo */
+  align-items: center;         /* Alinha os itens no centro verticalmente */
+  justify-content: center;     /* Alinha os itens no centro horizontalmente */
+  background-color: #f2f2f2;   /* Define o fundo da página com cor cinza claro */
+}
+
+/* Container principal que envolve todo o conteúdo */
+.container {
+  width: 100%;                 /* Ocupa 100% da largura da tela */
+  height: 100vh;               /* Ocupa 100% da altura da tela */
+  background-color: white;     /* Fundo branco */
+  overflow: hidden;            /* Impede o conteúdo de sair da área visível */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor da container */
+}
+
+/* Estilo do cabeçalho */
+.header {
+  background-color: #009688;   /* Fundo verde */
+  color: white;                /* Cor do texto branco */
+  display: flex;                /* Usando flexbox para organizar os botões */
+  justify-content: space-between; /* Alinha os itens de forma espaçada */
+  padding: 15px;                /* Adiciona 15px de padding ao redor do conteúdo */
+}
+
+/* Estilos para os botões de configuração e sair */
+.config-btn,
+.exit-btn {
+  background: none;            /* Remove o fundo dos botões */
+  border: none;                /* Remove a borda dos botões */
+  color: white;                /* Cor do texto dos botões é branco */
+  font-size: 14px;             /* Define o tamanho da fonte */
+  cursor: pointer;            /* Cursor de ponteiro para indicar que é clicável */
+}
+
+/* Estilo da seção de perfil */
+.profile {
+  text-align: center;          /* Alinha o conteúdo do perfil ao centro */
+  padding: 10px 0;             /* Adiciona padding acima e abaixo do conteúdo */
+}
+
+/* Estilos da imagem de perfil */
+.profile-pic {
+  width: 100px;                /* Largura de 100px */
+  height: 100px;               /* Altura de 100px */
+  border-radius: 50%;          /* Faz a imagem ficar circular */
+  object-fit: cover;           /* Faz a imagem cobrir toda a área do elemento */
+  margin-bottom: 1px;          /* Margem abaixo da imagem de perfil */
+}
+
+/* Estilos do nome de usuário */
+.username {
+  font-size: 18px;             /* Tamanho da fonte 18px */
+  margin-top: 30px;            /* Adiciona 30px de margem acima */
+  color: #333;                 /* Cor do texto do nome é cinza escuro */
+}
+
+/* Menu de opções */
+.menu {
+  display: grid;               /* Usa grid para organizar os itens */
+  grid-template-columns: 1fr 1fr; /* Divide o grid em duas colunas */
+  gap: 10px;                   /* Adiciona um espaçamento de 10px entre os itens do grid */
+  padding: 20px;                /* Padding de 20px ao redor do menu */
+  position: relative;          /* Permite o uso de position para ajuste */
+  top: 20%;                     /* Move o menu 20% para baixo */
+  transform: translateY(-20%); /* Move o menu para cima em 20% para compensar o top */
+}
+
+/* Estilo de cada item do menu */
+.menu-item {
+  text-align: center;          /* Alinha o texto dos itens ao centro */
+  padding: 12px 0;             /* Adiciona padding acima e abaixo do texto */
+  background-color: #009688;   /* Fundo verde */
+  color: white;                /* Cor do texto branca */
+  text-decoration: none;       /* Remove o sublinhado do link */
+  border-radius: 20px;         /* Bordas arredondadas */
+  font-size: 16px;             /* Tamanho da fonte de 16px */
+  transition: background-color 0.3s; /* Transição suave na troca de cor de fundo */
+  width: 100%;                 /* Faz os itens ocuparem toda a largura disponível */
+}
+
+/* Efeito de hover nos itens do menu */
+.menu-item:hover {
+  background-color: #00796b;   /* Tom mais escuro de verde ao passar o mouse */
+}
+
+/* Estilos específicos para o botão de localização */
+#location-button {
+  grid-column: 1 / -1;         /* Faz o botão de localização ocupar toda a largura do grid */
+}
+
+/* Estilos para o output de localização */
+#location-output {
+  grid-column: 1 / -1;         /* Faz a saída de localização ocupar toda a largura do grid */
+  margin-top: 10px;             /* Adiciona 10px de margem acima da saída de localização */
+  font-size: 16px;              /* Define o tamanho da fonte como 16px */
+  color: #333;                  /* Cor do texto em cinza escuro */
+  text-align: center;           /* Centraliza o texto da saída */
+}

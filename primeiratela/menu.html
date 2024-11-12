@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Define o tipo de documento como HTML5 -->
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva em diferentes dispositivos -->
+  <title>Perfil</title> <!-- Define o título da página -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"> <!-- Importa a fonte Poppins do Google Fonts -->
+  <link rel="stylesheet" href="menu.css"> <!-- Link para o arquivo CSS externo que estiliza a página -->
+</head>
+<body>
+  <!-- Contêiner principal para agrupar o conteúdo -->
+  <div class="container">
+    
+    <!-- Cabeçalho com botões de configuração e saída -->
+    <div class="header">
+      <button class="config-btn" onclick="window.location.href='configuracao.html'">Configurações</button> <!-- Botão para redirecionar para a página de configurações -->
+      <button class="exit-btn" onclick="window.location.href='primeiratela.html'">Sair</button> <!-- Botão para redirecionar para a página inicial (sair) -->
+    </div>
+
+    <!-- Seção do perfil do usuário -->
+    <div class="profile">
+      <img id="profile-pic" src="img/TIAMEI.jpg" alt="Foto de perfil" class="profile-pic"> <!-- Imagem de perfil com um identificador para permitir a alteração dinâmica via JavaScript -->
+      <h1 id="username" class="username">Amanda</h1> <!-- Nome de usuário que pode ser atualizado via JavaScript -->
+    </div>
+
+    <!-- Menu com links para outras páginas -->
+    <div class="menu">
+      <a href="caldendario.html" class="menu-item">Lembretes</a> <!-- Link para a página de lembretes -->
+      <a href="index.html" class="menu-item">Mei</a> <!-- Link para a página principal (MEI) -->
+      <a href="contatos.html" class="menu-item">Contatos</a> <!-- Link para a página de contatos -->
+      <a href="historico.html" class="menu-item">Histórico</a> <!-- Link para a página de histórico -->
+      <button id="location-button" class="menu-item">Localização</button> <!-- Botão para ativar a função de localização (JavaScript) -->
+      <div id="location-output"></div> <!-- Área para exibir a localização obtida -->
+    </div>
+  </div>
+
+  <!-- Script externo para funcionalidades adicionais -->
+  <script src="menu.js"></script>
+
+  <script>
+    // Função executada quando a página é carregada
+    window.onload = function() {
+      const profileName = localStorage.getItem('profileName') || 'Amanda'; // Obtém o nome do perfil do localStorage ou usa o padrão "Amanda"
+      const profilePic = localStorage.getItem('profilePic') || 'img/TIAMEI.jpg'; // Obtém a foto de perfil do localStorage ou usa a imagem padrão
+
+      document.getElementById('username').innerText = profileName; // Atualiza o nome de usuário exibido na página
+      document.getElementById('profile-pic').src = profilePic; // Atualiza a foto de perfil exibida na página
+    }
+  </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página se ajustar a diferentes dispositivos -->
+    <title>Mei</title> <!-- Define o título da página -->
+
+    <!-- Importa o estilo de ícones do Material Symbols Rounded do Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo para estilizar a página -->
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <button id="back-button" class="icon material-symbols-rounded" onclick="window.location.href='menu.html'">arrow_back</button> <!-- Botão de voltar com ícone -->
+        <h1 class="title">Olá, sou a Mei</h1> <!-- Título da página com o nome da assistente -->
+        <p class="subtitle">Como posso te ajudar?</p> <!-- Subtítulo que convida o usuário a interagir -->
+    </header>
+
+    <!-- Área onde as mensagens do chat serão exibidas -->
+    <div class="chat-list"></div>
+
+    <!-- Área de digitação para o usuário -->
+    <div class="typing-area">
+        <form action="#" class="typing-form">
+            <!-- Campo de entrada de texto -->
+            <div class="input-wrapper">
+                <input id="voz" type="text" placeholder="Escreva aqui" class="typing-input" required /> <!-- Campo de entrada para a mensagem do usuário -->
+                <button id="send-message-button" class="icon material-symbols-rounded">send</button> <!-- Botão para enviar a mensagem -->
+            </div>
+
+            <!-- Botões de ações adicionais -->
+            <div class="action-buttons">
+                <span id="delete-chat-button" class="icon material-symbols-rounded">delete</span> <!-- Botão para apagar o chat -->
+                <span id="voice-chat-button" class="icon material-symbols-rounded">mic</span> <!-- Botão para ativar o modo de chat por voz -->
+                <span id="view-history-button" class="icon material-symbols-rounded" onclick="window.location.href='historico.html'">history</span> <!-- Botão para visualizar o histórico de mensagens -->
+            </div>
+        </form>
+
+        <p id="resultado"></p> <!-- Área para exibir o resultado de alguma ação (opcional) -->
+    </div>
+
+    <script src="script.js"></script> <!-- Link para o arquivo JavaScript externo com funcionalidades da página -->
+</body>
+</html>

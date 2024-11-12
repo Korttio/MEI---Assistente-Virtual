@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário Funcional com Alarmes</title>
+    <link rel="stylesheet" href="calendario.css">
+</head>
+<body>
+    <div class="calendario">
+        <header>
+            <h1 id="titulo"></h1>
+            <button id="btn-anterior">&lt;</button>
+            <button id="btn-proximo">&gt;</button>
+        </header>
+        <div class="dias-da-semana">
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sab</div>
+        </div>
+        <div class="dias" id="dias"></div>
+        <div class="lembrete">
+            <input type="date" id="data-lembrete">
+            <input type="text" id="texto-lembrete" placeholder="Digite seu lembrete">
+            <input type="time" id="hora-lembrete">
+            <button id="btn-adicionar-lembrete">Adicionar Lembrete</button>
+        </div>
+        <div id="lembrar" class="lembrar">
+            <p id="texto-lembrete-avisar"></p>
+            <button id="btn-aceitar">Aceitar</button>
+            <button id="btn-recusar">Recusar</button>
+        </div>
+    </div>
+    <script src="calendario.js"></script>
+</body>
+</html>
+

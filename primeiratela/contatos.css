@@ -1,0 +1,86 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: 'Poppins', sans-serif; /* Define a fonte Poppins para o texto */
+    background-color: #f4f4f4; /* Cor de fundo da página */
+    margin: 0; /* Remove a margem padrão do navegador */
+    padding: 20px; /* Adiciona preenchimento ao redor do conteúdo */
+}
+
+/* Contêiner principal que envolve o conteúdo */
+.container {
+    background: white; /* Cor de fundo do contêiner */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves ao redor do contêiner */
+    max-width: 600px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    padding: 20px; /* Preenchimento interno do contêiner */
+}
+
+/* Título da página */
+h1 {
+    text-align: center; /* Alinha o título ao centro */
+    color: #333; /* Cor do texto do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Botão de "Voltar" */
+.back-button {
+    background-color: #009688; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 15px; /* Preenchimento interno do botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha */
+    border-radius: 5px; /* Cantos arredondados */
+    display: block; /* Exibe o botão como um bloco (ocupa toda a largura disponível) */
+    margin: 0 auto 20px; /* Centraliza o botão e adiciona margem inferior */
+}
+
+/* Efeito hover para o botão de "Voltar" */
+.back-button:hover {
+    background-color: #00796b; /* Tom mais escuro de verde quando o mouse passa por cima */
+}
+
+/* Lista de contatos */
+.contact-list {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento da lista */
+}
+
+/* Item de contato */
+.contact-item {
+    border-bottom: 1px solid #e0e0e0; /* Borda inferior separando os itens */
+    padding: 10px 0; /* Preenchimento interno para separar os itens */
+}
+
+/* Contêiner de informações de contato */
+.contact-info {
+    display: flex; /* Exibe os elementos em linha */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Imagem do contato */
+.contact-image {
+    width: 50px; /* Define o tamanho da imagem */
+    height: 50px; /* Define a altura da imagem */
+    border-radius: 50%; /* Deixa a imagem com formato circular */
+    margin-right: 15px; /* Adiciona margem à direita da imagem */
+}
+
+/* Nome do contato */
+.contact-name {
+    font-weight: 600; /* Deixa o nome em negrito */
+    color: #333; /* Cor do texto do nome */
+}
+
+/* Conteúdo adicional do contato (accordion) */
+.accordion-content {
+    display: none; /* Esconde o conteúdo por padrão */
+    margin-top: 10px; /* Adiciona espaço acima do conteúdo */
+    color: #666; /* Cor do texto adicional */
+}
+
+/* Exibe o conteúdo adicional quando o item de contato estiver ativo */
+.contact-item.active .accordion-content {
+    display: block; /* Exibe o conteúdo */
+}

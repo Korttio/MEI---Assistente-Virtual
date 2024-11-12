@@ -1,0 +1,48 @@
+/* Estilo geral do body */
+body {
+    display: flex; /* Usando Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Preenche toda a altura da tela */
+    margin: 0; /* Remove a margem padrão */
+    background-color: #e6e6e7; /* Cor de fundo suave */
+    font-family: Arial, sans-serif; /* Define a fonte do corpo */
+}
+
+/* Contêiner principal */
+.container {
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    border: 5px solid rgba(148, 73, 73, 0); /* Borda invisível (alpha 0) */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #096d63; /* Cor de fundo verde escuro */
+}
+
+/* Estilo do título */
+h1 {
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #ffffff; /* Cor do título */
+}
+
+/* Contêiner de botões */
+.buttons {
+    display: flex; /* Usando Flexbox para organizar os botões */
+    flex-direction: column; /* Organiza os botões em coluna */
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilo dos botões */
+.button {
+    padding: 10px 20px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+    background-color: #009688; /* Cor de fundo do botão */
+    border: none; /* Remove bordas padrões */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de clique */
+    transition: background-color 0.3s; /* Transição suave de cor de fundo */
+}
+
+/* Efeito de hover nos botões */
+.button:hover {
+    background-color: #096d63; /* Cor mais escura ao passar o mouse */
+}
